@@ -30,10 +30,23 @@ body {
   min-height: 100%;
   margin: 0 auto;
   width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
