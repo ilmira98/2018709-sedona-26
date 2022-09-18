@@ -23,12 +23,14 @@
 
 .advantages__item {
   position: relative;
+  padding: 22px 32px;
   box-sizing: border-box;
   width: 320px;
   .last-element-margin-bottom();
 
   @media (min-width: @tablet-width) {
     width: 256px;
+    padding: 42px 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -48,15 +50,90 @@
   }
 
   &--spot {
+    padding: 22px 18px 32px 65px;
     text-align: left;
 
     @media (min-width: @tablet-width) {
+      padding: 158px 32px 59px;
       text-align: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 158px 58px 59px;
     }
   }
 
   &--excellence {
     background: #eeeeee;
+  }
+
+  &--icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 15px;
+
+    @media (min-width: @tablet-width) {
+      width: auto;
+      height: auto;
+      top: 60px;
+      left: 90px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 59px;
+      left: 161px;
+    }
+  }
+
+  &--line::after {
+    @media (max-width: 767px) {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: #d6d6d6;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+    }
+  }
+}
+
+.advantages__description-container {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 15px;
+  box-sizing: border-box;
+  position: relative;
+
+  &--decore {
+    @media (max-width: 767px) {
+      padding-top: 54px;
+    }
+
+    &::after {
+      @media (max-width: 767px) {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 37px;
+        background-image: url("../img/main/whitecopy2.svg");
+        background-position: 50%;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 256px;
+      padding: 42px 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 400px;
+      padding: 49px 52px 54px;
+    }
   }
 }
 
@@ -64,30 +141,32 @@
 .advantages__title {
   .title();
   color: inherit;
+  margin-bottom: 11px;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 18px;
     padding: 0 20px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 16px;
     padding: 0 84px;
   }
 }
 
-.advantages__description-container {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  position: relative;
-
-
-  @media (min-width: @tablet-width) {
-    width: 256px;
-  }
+.advantages__number {
+  display: block;
+  margin-bottom: 17px;
 
   @media (min-width: @desktop-width) {
-    width: 400px;
+    margin-bottom: 22px;
   }
+}
+
+.advantages__description {
+  margin-top: 0;
+  margin-bottom: 11px;
 }
 
 .advantages__image {
