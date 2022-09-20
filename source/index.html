@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+    <link rel="manifest" href="/manifest.json">
   </head>
   <body class="main-body">
       <header class="main-header">
@@ -53,7 +57,11 @@
                         <p class="advantages__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                       </div>
                       <div class="advantages__image-container">
-                        <img class="advantages__image" src="img/main/photo-city-mobile.png" alt="Фото города." width="320" height="260">
+                        <picture>
+                          <source media="(min-width: 768px)" srcset="img/main/photo-city-tablet.jpg 1x, img/main/photo-city-tablet@2x.jpg 2x">
+                          <source media="(min-width: 1200px)" srcset="img/main/photo-city-desktop.jpg 1x, img/main/photo-city-desktop@2x.jpg 2x">
+                          <img class="advantages__image" src="img/main/photo-city.jpg" srcset="img/main/photo-city@2x.jpg 2x"alt="Фото города." width="320" height="260">
+                        </picture>
                       </div>
                     </li>
                     <li class="advantages__item advantages__item--spot">
@@ -87,7 +95,11 @@
                         <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
                       </div>
                       <div class="advantages__image-container advantages__image--order">
-                        <img class="advantages__image" src="img/main/photo-bridge-mobile.png" alt="Фото гор." width="320" height="260">
+                        <picture>
+                          <source media="(min-width: 768px)" srcset="img/main/photo-bridge-tablet.jpg 1x, img/main/photo-bridge-tablet@2x.jpg 2x">
+                          <source media="(min-width: 1200px)" srcset="img/main/photo-bridge-desktop.jpg 1x, img/main/photo-bridge-desktop@2x.jpg 2x">
+                          <img class="advantages__image" src="img/main/photo-bridge.jpg" srcset="img/main/photo-bridge@2x.jpg 2x"alt="Фото города." width="320" height="260">
+                        </picture>
                       </div>
                     </li>
                     <li class="advantages__item advantages__item--excellence advantages__item--line">
